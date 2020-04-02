@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'game', component: GameComponent},
   {path: 'credits', component: CreditsComponent},
-  {path: 'gamegovernor', component: CommanderComponent},
+  {path: 'commander', component: CommanderComponent},
 ];
 
 @NgModule({
