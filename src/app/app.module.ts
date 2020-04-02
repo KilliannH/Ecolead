@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landingpage/landingpage.component';
 import { CreditsComponent } from './credits/credits.component';
 import { HeaderComponent } from './components/landingpage/header/header.component';
+import { MainButtonsComponent } from './components/landingpage/mainbuttons/mainbuttons.component';
 import { GameComponent } from './game/game.component';
 
 
@@ -18,8 +19,10 @@ import { GameComponent } from './game/game.component';
     AppComponent,
     NavbarComponent,
     LandingPageComponent,
+    MainButtonsComponent,
     CreditsComponent,
     GameComponent,
+    HeaderComponent,
 
   ],
   imports: [
