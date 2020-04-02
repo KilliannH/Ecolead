@@ -1,12 +1,36 @@
 
-<div class="governor">
-<h1>Hello governor !</h1>
+<div class="commander">
+<div class="commander-row">
+<h1>Hello commander !</h1>
 <p>what is your name ?</p>
 
   <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Input</mat-label>
-      <input matInput>
+    <mat-form-field appearance="">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Arnold Shwarzenegger">
     </mat-form-field>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <mat-form-field>
+      <mat-label>Country</mat-label>
+      <mat-select  value="France" >
+
+        <mat-option value="France">France</mat-option>
+        <mat-option value="China">China</mat-option>
+        <mat-option value="Canada">Canada</mat-option>
+        <mat-option value="Australia">Australia</mat-option>
+        <mat-option value="Congo">Congo</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-raised-button color="primary">Validate</button>
     </div>
   </div>
