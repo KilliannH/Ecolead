@@ -8,7 +8,9 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landingpage/landingpage.component';
 import { CreditsComponent } from './credits/credits.component';
+import { HeaderComponent } from './components/landingpage/header/header.component';
 import { GameComponent } from './game/game.component';
+
 
 
 @NgModule({
