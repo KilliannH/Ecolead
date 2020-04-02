@@ -9,6 +9,4 @@ export class AppComponent {
 
   title:String = 'ecolead-app';
   teamName:String = 'EcopTEAMistes';
-
-
 }

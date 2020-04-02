@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landingpage/landingpage.component';
+import { CreditsComponent } from './credits/credits.component';
+import { GameComponent } from './game/game.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { LandingPageComponent } from './components/landingpage/landingpage.compo
     AppComponent,
     NavbarComponent,
     LandingPageComponent,
+    CreditsComponent,
+    GameComponent,
 
   ],
   imports: [
