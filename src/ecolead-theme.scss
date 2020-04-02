@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$ecolead-theme-primary: mat-palette($mat-green);
+$ecolead-theme-accent:  mat-palette($mat-blue-gray, A200, A100, A400);
+
+$ecolead-theme-warn:    mat-palette($mat-red);
+
+$ecolead-theme: mat-light-theme($ecolead-theme-primary, $ecolead-theme-accent, $ecolead-theme-warn);
+
+@include angular-material-theme($ecolead-theme);
