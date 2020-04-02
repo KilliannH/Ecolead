@@ -6,9 +6,11 @@ import {CreditsComponent} from './credits/credits.component';
 
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
+  {path: 'landing', component: LandingPageComponent},
   {path: 'game', component: GameComponent},
   {path: 'credits', component: CreditsComponent},
+
+  {path: '', redirectTo: '/landing', pathMatch: 'full'},
 ];
 
 @NgModule({
