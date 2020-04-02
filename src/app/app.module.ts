@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MainbuttonsComponent } from './components/mainbuttons/mainbuttons.component';
+import { LandingPageComponent } from './components/landingpage/landingpage.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent,
-    MainbuttonsComponent,
+    LandingPageComponent,
+
   ],
   imports: [
     BrowserModule,
