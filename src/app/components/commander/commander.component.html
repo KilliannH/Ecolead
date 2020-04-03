@@ -2,7 +2,7 @@
 <div class="commander">
 <div class="commander-row">
   <div class="margin">
-<h1>Hello commander !{{commander.name}}</h1>
+<h1>Hello commander !</h1>
 <p>what is your name ?</p>
   </div>
   <div class="margin">
@@ -36,6 +36,11 @@
   <div class="margin">
     <br>
     <br>
-    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander">Validate</button>
+    <div></div>
+
+    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander" disabled="{{!commander.name}} || {{!commander.country}} ? true : false"    >Validate</button>
+
+
   </div>
+
   </div>
