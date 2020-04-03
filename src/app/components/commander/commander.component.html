@@ -21,7 +21,7 @@
   <div class="margin">
     <mat-form-field>
       <mat-label>Country</mat-label>
-      <mat-select  value="France" >
+      <mat-select  value="France" [(ngModel)]="commander.country" >
 
         <mat-option value="France">France</mat-option>
         <mat-option disabled value="China">China (soon)</mat-option>
@@ -36,6 +36,6 @@
   <div class="margin">
     <br>
     <br>
-    <button mat-raised-button color="primary"  (click)="commanderName()" (submit)="commander">Validate</button>
+    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander">Validate</button>
   </div>
   </div>
