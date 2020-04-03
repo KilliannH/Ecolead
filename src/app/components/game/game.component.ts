@@ -3,6 +3,7 @@ import {Loader, LoaderOptions} from 'google-maps';
 
 import { ViewChild } from '@angular/core';
 import LatLng = google.maps.LatLng;
+import {Config} from '../../../config';
 
 @Component({
   selector: 'app-game',
@@ -26,7 +27,7 @@ export class GameComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.options = {/* todo */};
-    // this.loader = new Loader(/* myAPiKey */, this.options);
+    this.loader = new Loader(Config.GOOGLE_API_KEY, this.options);
     this.mapOptions = {
       center: this.coordinates,
       zoom: 8,
