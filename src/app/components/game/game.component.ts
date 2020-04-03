@@ -2,7 +2,6 @@ import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import {Loader, LoaderOptions} from 'google-maps';
 
 import { ViewChild } from '@angular/core';
-import LatLng = google.maps.LatLng;
 import {Config} from '../../../config';
 
 @Component({
@@ -16,22 +15,11 @@ export class GameComponent implements OnInit, AfterViewInit {
   options: LoaderOptions;
   loader: Loader;
 
-  map: google.maps.Map;
-  lat: number = 40.730610;
-  lng: number = -73.935242;
-  coordinates: LatLng = new google.maps.LatLng(this.lat, this.lng);
-  mapOptions: google.maps.MapOptions;
-  marker: google.maps.Marker;
-
   constructor() { }
 
   ngOnInit(): void {
     this.options = {/* todo */};
     this.loader = new Loader(Config.GOOGLE_API_KEY, this.options);
-    this.mapOptions = {
-      center: this.coordinates,
-      zoom: 8,
-    };
   }
 
   ngAfterViewInit(): void {
@@ -39,11 +27,10 @@ export class GameComponent implements OnInit, AfterViewInit {
   }
 
   mapInitializer() {
-    this.loader.load().then(() => {
-      this.map = new google.maps.Map(this.gmap.nativeElement, this.mapOptions);
-      this.marker = new google.maps.Marker({
-        position: this.coordinates,
-        map: this.map,
+    this.loader.load().then((google) => {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8,
       });
     });
   }
