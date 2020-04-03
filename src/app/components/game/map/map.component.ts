@@ -31,7 +31,7 @@ export class MapComponent implements OnInit, AfterViewInit {
       ],
       view: new View({
         center: [813079.7791264898, 5929220.284081122],
-        zoom: 7
+        zoom: 3
       }),
       controls: defaultControls().extend([
         new ZoomToExtent({
