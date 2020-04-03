@@ -7,13 +7,14 @@ import { AppData } from 'src/app/AppData';
   styleUrls: ['./commander.component.css']
 })
 export class CommanderComponent implements OnInit {
-commander = {name: ''};
+
+  commander = {name: ''};
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  commanderName(){
+    console.log(this.commander);
   }
-commanderName(){
-  console.log(this.commander);
-}
 }

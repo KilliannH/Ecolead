@@ -29,7 +29,9 @@
               },
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "http://maps.googleapis.com/maps/api/js"
+            ]
           },
           "configurations": {
             "production": {
