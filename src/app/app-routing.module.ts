@@ -4,6 +4,7 @@ import {LandingPageComponent} from './components/landingpage/landingpage.compone
 import {GameComponent} from './components/game/game.component';
 import {CreditsComponent} from './components/credits/credits.component';
 import {CommanderComponent} from './components/commander/commander.component';
+import { EventsComponent } from './components/game/events/events.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'game', component: GameComponent},
   {path: 'credits', component: CreditsComponent},
   {path: 'commander', component: CommanderComponent},
+  {path: 'events', component: EventsComponent},
 ];
 
 @NgModule({

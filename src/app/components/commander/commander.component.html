@@ -14,15 +14,11 @@
     </mat-form-field>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <div class="margin">
+    <p> in which country do you want operate ?</p>
+    <br>
     <mat-form-field>
       <mat-label>Country</mat-label>
       <mat-select  value="France" [(ngModel)]="commander.country" >
@@ -43,6 +39,7 @@
     <br>
     <div></div>
 
-    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander" disabled="{{!commander.name || !commander.country}}"    >Validate</button>
+    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander" disabled="{{!commander.name || !commander.country}}" routerLink="events"   >Validate</button>
   </div>
+</div>
 </div>

@@ -14,6 +14,8 @@ import { MainButtonsComponent } from './components/landingpage/mainbuttons/mainb
 import { GameComponent } from './components/game/game.component';
 import { CommanderComponent } from './components/commander/commander.component';
 import { MapComponent } from './components/game/map/map.component';
+import { RessourcesComponent } from './components/game/ressources/ressources.component';
+import { EventsComponent } from './components/game/events/events.component';
 
 
 
@@ -28,6 +30,8 @@ import { MapComponent } from './components/game/map/map.component';
     HeaderComponent,
     CommanderComponent,
     MapComponent,
+    RessourcesComponent,
+    EventsComponent,
 
   ],
   imports: [
