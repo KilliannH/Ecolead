@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppData } from 'src/app/AppData';
 
 @Component({
   selector: 'app-commander',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commander.component.css']
 })
 export class CommanderComponent implements OnInit {
-
+commander = {name: ''};
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
+commanderName(){
+  console.log(this.commander);
+}
 }

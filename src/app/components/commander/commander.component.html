@@ -1,15 +1,16 @@
 
 <div class="commander">
 <div class="commander-row">
-<h1>Hello commander !</h1>
+  <div class="margin">
+<h1>Hello commander !{{commander.name}}</h1>
 <p>what is your name ?</p>
-
-  <div class="example-container">
+  </div>
+  <div class="margin">
     <mat-form-field appearance="">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Arnold Shwarzenegger">
+      <mat-label for="name">Name</mat-label>
+      <input matInput placeholder="Arnold Shwarzenegger" id="name" class="form-control" [(ngModel)]="commander.name">
     </mat-form-field>
-
+  </div>
     <br>
     <br>
     <br>
@@ -17,20 +18,24 @@
     <br>
     <br>
     <br>
+  <div class="margin">
     <mat-form-field>
       <mat-label>Country</mat-label>
       <mat-select  value="France" >
 
         <mat-option value="France">France</mat-option>
-        <mat-option value="China">China</mat-option>
-        <mat-option value="Canada">Canada</mat-option>
-        <mat-option value="Australia">Australia</mat-option>
-        <mat-option value="Congo">Congo</mat-option>
+        <mat-option disabled value="China">China (soon)</mat-option>
+        <mat-option disabled value="Canada">Canada (soon)</mat-option>
+        <mat-option disabled value="Australia">Australia (soon)</mat-option>
+        <mat-option disabled value="Congo">Congo (soon)</mat-option>
 
       </mat-select>
+
     </mat-form-field>
+  </div>
+  <div class="margin">
     <br>
     <br>
-    <button mat-raised-button color="primary">Validate</button>
-    </div>
+    <button mat-raised-button color="primary"  (click)="commanderName()" (submit)="commander">Validate</button>
+  </div>
   </div>
