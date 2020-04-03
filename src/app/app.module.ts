@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/landingpage/header/header.componen
 import { MainButtonsComponent } from './components/landingpage/mainbuttons/mainbuttons.component';
 import { GameComponent } from './components/game/game.component';
 import { CommanderComponent } from './components/commander/commander.component';
+import { MapComponent } from './components/game/map/map.component';
 
 
 
@@ -26,6 +27,7 @@ import { CommanderComponent } from './components/commander/commander.component';
     GameComponent,
     HeaderComponent,
     CommanderComponent,
+    MapComponent,
 
   ],
   imports: [
