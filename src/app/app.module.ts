@@ -19,6 +19,7 @@ import { EventsComponent } from './components/game/events/events.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,7 @@ import { EventsComponent } from './components/game/events/events.component';
     MaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [RessourcesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

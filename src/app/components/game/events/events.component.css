@@ -1,0 +1,33 @@
+.image{
+max-width: 50%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+
+
+}
+.event-title{
+
+
+}
+.event-content{
+
+}
+.event-button{
+  grid-row: span;
+}
+
+.event-card{
+  max-width: 70%;
+
+
+
+}
+.margin{
+  margin-top: 10vh;
+
+
+}
