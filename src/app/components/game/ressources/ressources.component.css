@@ -1,0 +1,9 @@
+.ressources {
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: 1;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid black;
+}

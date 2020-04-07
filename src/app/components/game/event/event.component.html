@@ -1,0 +1,13 @@
+<div [ngClass]="{ hidden: hidden, event: true }">
+  <h3>{{ actualEvent.description }}</h3>
+  <p>{{ actualEvent.text }}</p>
+  <div class="actions">
+    <div
+      *ngFor="let action of actualEvent.actions; let i = index"
+      class="action"
+      (click)="onActionClick(i)"
+    >
+      {{ action.description }}
+    </div>
+  </div>
+</div>

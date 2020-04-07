@@ -1,45 +1,48 @@
-
 <div class="commander">
-<div class="commander-row">
+  <div class="commander-row">
+    <div class="margin">
+      <h1>Hello commander !</h1>
+      <p>what is your name ?</p>
+    </div>
 
-  <div class="margin">
-    <h1>Hello commander !</h1>
-    <p>what is your name ?</p>
+    <div class="margin">
+      <mat-form-field appearance="">
+        <mat-label for="name">Name</mat-label>
+        <input
+          matInput
+          placeholder="Arnold Shwarzenegger"
+          id="name"
+          class="form-control"
+          [(ngModel)]="commander.name"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="margin">
+      <p>in which country do you want operate ?</p>
+      <br />
+      <mat-form-field>
+        <mat-label>Country</mat-label>
+        <mat-select value="France" [(ngModel)]="commander.country">
+          <mat-option value="France">France</mat-option>
+          <mat-option disabled value="China">China (soon)</mat-option>
+          <mat-option disabled value="Canada">Canada (soon)</mat-option>
+          <mat-option disabled value="Australia">Australia (soon)</mat-option>
+          <mat-option disabled value="Congo">Congo (soon)</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="margin">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="startNewGame()"
+        disabled="{{ !commander.name || !commander.country }}"
+        routerLink="/game"
+      >
+        Validate
+      </button>
+    </div>
   </div>
-
-  <div class="margin">
-    <mat-form-field appearance="">
-      <mat-label for="name">Name</mat-label>
-      <input matInput placeholder="Arnold Shwarzenegger" id="name" class="form-control" [(ngModel)]="commander.name">
-    </mat-form-field>
-  </div>
-
-
-
-  <div class="margin">
-    <p> in which country do you want operate ?</p>
-    <br>
-    <mat-form-field>
-      <mat-label>Country</mat-label>
-      <mat-select  value="France" [(ngModel)]="commander.country" >
-
-        <mat-option value="France">France</mat-option>
-        <mat-option disabled value="China">China (soon)</mat-option>
-        <mat-option disabled value="Canada">Canada (soon)</mat-option>
-        <mat-option disabled value="Australia">Australia (soon)</mat-option>
-        <mat-option disabled value="Congo">Congo (soon)</mat-option>
-
-      </mat-select>
-
-    </mat-form-field>
-  </div>
-
-  <div class="margin">
-    <br>
-    <br>
-    <div></div>
-
-    <button mat-raised-button color="primary"  (click)="getCommanderName()" (submit)="commander" disabled="{{!commander.name || !commander.country}}" routerLink="events"   >Validate</button>
-  </div>
-</div>
 </div>

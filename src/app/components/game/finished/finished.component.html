@@ -1,0 +1,7 @@
+<div [ngClass]="{ hidden: hidden, gameFinished: true }">
+  <h2>Cette partie est terminée</h2>
+  <p>Votre score est : {{ gameService.calculateScore() }}</p>
+  <button mat-raised-button color="primary" routerLink="/commander">
+    Start a new Game
+  </button>
+</div>

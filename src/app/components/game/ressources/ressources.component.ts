@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from 'src/app/services/game.service';
 
 @Component({
   selector: 'app-ressources',
   templateUrl: './ressources.component.html',
-  styleUrls: ['./ressources.component.css']
+  styleUrls: ['./ressources.component.css'],
 })
 export class RessourcesComponent implements OnInit {
-money: number = 50;
-happiness: number = 50;
-garbage: number = 50;
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(public gameService: GameService) {
+    console.log(gameService.gameResources);
   }
 
+  ngOnInit(): void {}
 }

@@ -1,0 +1,20 @@
+.gameFinished {
+  position: absolute;
+  z-index: 2;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+
+  padding: 50px;
+  display: flex;
+
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}

@@ -15,9 +15,8 @@ import { GameComponent } from './components/game/game.component';
 import { CommanderComponent } from './components/commander/commander.component';
 import { MapComponent } from './components/game/map/map.component';
 import { RessourcesComponent } from './components/game/ressources/ressources.component';
-import { EventsComponent } from './components/game/events/events.component';
-
-
+import { EventComponent } from './components/game/event/event.component';
+import { FinishedComponent } from './components/game/finished/finished.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +30,17 @@ import { EventsComponent } from './components/game/events/events.component';
     CommanderComponent,
     MapComponent,
     RessourcesComponent,
-    EventsComponent,
-
+    EventComponent,
+    FinishedComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
