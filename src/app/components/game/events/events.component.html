@@ -3,22 +3,21 @@
 <div class="container">
 <mat-card class="event-card">
 
-    <mat-card-title class="event-title">Tsunami sa mère</mat-card-title>
+    <mat-card-title class="event-title">{{events.title}}</mat-card-title>
 
 
-    <img mat-card-image class="image" src="https://www.o5-event.fr/wp-content/uploads/2014/08/Ocean-vague-rouleau2-e1409908318641.jpg" alt="">
+    <img mat-card-image class="image" src="{{events.image}}" alt="">
 
   <mat-card-content class="event-content">
     <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
+      {{events.description}}    </p>
   </mat-card-content>
   <mat-card-actions class="event-button">
 
-    <button mat-button class="choice-1" (click)="getChoice1()" color="primary">je veux tester l'alignement vertical</button>
+    <button mat-button class="choice-1" (click)="getChoice1()" color="primary">{{events.button1}}</button>
 
-    <button mat-button class="choice-2"  (click)="getChoice2()" color="primary">c'est dégueulasse</button>
-    <button mat-button class="choice-3"  (click)="getChoice3()" color="primary">et ça marche pas des masses</button>
+    <button mat-button class="choice-2"  (click)="getChoice2()" color="primary">{{events.button2}}</button>
+    <button mat-button class="choice-3"  (click)="getChoice3()" color="primary">{{events.button3}}</button>
   </mat-card-actions>
 </mat-card>
 </div>

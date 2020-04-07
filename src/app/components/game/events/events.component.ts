@@ -1,8 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Injectable} from '@angular/core';
+import {LocalService} from '../../../services/local.service';
+import {EventsServices} from '../../../services/local.service';
+import {printLine} from 'tslint/lib/verify/lines';
 
 
-import {money} from '../ressources/ressources.component';
+
+// import {money} from '../ressources/ressources.component';
 
 @Component({
   selector: 'app-events',
@@ -13,31 +16,36 @@ import {money} from '../ressources/ressources.component';
 
 
 export class EventsComponent implements OnInit {
-@Input()
-  eventMoney: number = money;
-  eventMoneys = money;
-//  eventGarbage: number = garbage;
-//  eventHappiness: number = happiness;
+//  money = this.localService.money;
+//  garbage = this.localService.garbage;
+//  hapiness = this.localService.hapiness;
 
-  constructor() { }
+  constructor(public localService: LocalService,
+              public events: EventsServices) { }
 
   ngOnInit(): void {
+//    this.money = this.localService.money;
+//    this.garbage = this.localService.garbage;
+//    this.hapiness = this.localService.hapiness;
+
   }
 
 
   getChoice1(){
-    this.eventMoney += 10;
-//    this.money += 10;
-    console.log(this.eventMoney);
-    console.log(money);
-  }
+
+     this.localService.money += this.events.choice1money,
+      this.localService.garbage += this.events.choice1garbage,
+      this.localService.hapiness += this.events.choice1hapiness ;
+          }
   getChoice2(){
-//    this.eventHappiness -= 10;
-//    this.eventGarbage += 10;
-//    console.log(this.eventGarbage);
+     this.localService.money += this.events.choice2money,
+      this.localService.garbage += this.events.choice2garbage,
+      this.localService.hapiness += this.events.choice2hapiness ;
   }
   getChoice3(){
-//    this.eventGarbage -= 10;
+     this.localService.money += this.events.choice3money,
+      this.localService.garbage += this.events.choice3garbage,
+      this.localService.hapiness += this.events.choice3hapiness ;
   }
 
 }

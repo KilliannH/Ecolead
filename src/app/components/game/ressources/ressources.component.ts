@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalService} from '../../../services/local.service';
+
 
 
 @Component({
@@ -10,17 +12,14 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class RessourcesComponent implements OnInit {
-  money: number = 50;
-  happiness: number = 50;
-  garbage: number = 50;
+  money = this.localService.money;
 
-  constructor() { }
+  constructor(public localService: LocalService ) { }
 
   ngOnInit(): void {
+ this.money = this.localService.money;
   }
 
 }
 
-export let money = 50;
-//export let happiness;
-//export let garbage;
+
