@@ -2,13 +2,9 @@ import { Component, OnInit, Inject} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {DialogGameEventDialog} from './dialog/DialogGameEventDialog';
 import {LocalService} from '../services/local.service';
-
-export interface DialogData {
-  title: string;
-  desc: string;
-  img: string;
-  choices : string [];
-}
+import {forkJoin} from 'rxjs';
+import {Resource} from '../models/Resource';
+import {Event} from '../models/Event';
 
 @Component({
   selector: 'app-game',
@@ -17,42 +13,43 @@ export interface DialogData {
 })
 export class GameComponent implements OnInit {
 
-  resources: {
-    euros: number,
-    happiness: number,
-    pollution: number
-  };
+  resources: Resource [];
 
-  events: any;
+  events: Event [];
 
   constructor(public dialog: MatDialog, private localService: LocalService) { }
 
   ngOnInit(): void {
-    this.localService.getEvents().subscribe((res) => {
-      if(res) {
-        this.events = res;
-        console.log(this.events);
+    let observables = [this.localService.getEvents(), this.localService.getResources()];
 
-        this.resources = {
-          euros: 2000,
-          happiness: 5,
-          pollution: 5
-        };
-
-        setTimeout(() => this.openDialog(this.events[0]), 2000);
+    forkJoin(observables).subscribe(([events, resources]) => {
+      if(events) {
+        this.events = events;
       }
-    });
+
+      if(resources) {
+        this.resources = resources;
+      }
+        setTimeout(() => this.openDialog(this.events[0]), 2000);
+      });
   }
 
-  openDialog(gameEvent): void {
+  openDialog(gameEvent: Event): void {
     const dialogRef = this.dialog.open(DialogGameEventDialog, {
       width: '500px',
       data: gameEvent
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // this.animal = result;
+      this.events.forEach((event) => {
+        if(event.id === result.eventId) {
+          this.resources.forEach((resource) => {
+            if(result.selectedChoice.affectedResourceId == resource.id) {
+              resource.score += result.selectedChoice.score;
+            }
+          });
+        }
+      });
     });
   }
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "label": "euros",
+    "score": 2000,
+    "icon": "euro_symbol"
+  },
+  {
+    "id": 1,
+    "label": "happiness",
+    "score": 10,
+    "icon": "mood"
+  },
+  {
+    "id": 2,
+    "label": "pollution",
+    "score": 10,
+    "icon": "eco"
+  }
+]

@@ -11,7 +11,7 @@ export class HudComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.resources = {};
+    this.resources = [];
   }
 
 }

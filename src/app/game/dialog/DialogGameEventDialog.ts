@@ -1,6 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {DialogData} from '../game.component';
+import { Event } from '../../models/Event';
 
 @Component({
   selector: 'dialog-game-event-dialog',
@@ -9,12 +9,11 @@ import {DialogData} from '../game.component';
 })
 export class DialogGameEventDialog {
 
+  eventId: number;
   constructor(
     public dialogRef: MatDialogRef<DialogGameEventDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
+    @Inject(MAT_DIALOG_DATA) public data: Event) {
+    this.eventId = data.id;
   }
 
 }

@@ -1,5 +1,3 @@
 <div class="flex-container">
-  <div class="hud-item"><mat-icon>euro_symbol</mat-icon>{{resources.euros}}&nbsp;</div>
-  <div class="hud-item"><mat-icon>mood</mat-icon>{{resources.happiness}}&nbsp;</div>
-  <div class="hud-item"><mat-icon>eco</mat-icon>{{resources.pollution}}&nbsp;</div>
+  <div class="hud-item" *ngFor="let resource of resources"><mat-icon>{{resource.icon}}</mat-icon>{{resource.score}}&nbsp;</div>
 </div>

@@ -4,11 +4,9 @@
   </mat-card-header>
   <img mat-card-image src="{{data.img}}" alt="Photo of a Shiba Inu">
   <mat-card-content>
-    <p>
-      {{data.desc}}
-    </p>
+    <p>{{data.desc}}</p>
   </mat-card-content>
   <mat-card-actions>
-      <button *ngFor="let choice of data.choices" mat-button>{{choice}}</button>
+      <button *ngFor="let choice of data.choices" mat-button [mat-dialog-close]="{selectedChoice: choice, eventId: eventId}">{{choice.label}}</button>
   </mat-card-actions>
 </mat-card>
