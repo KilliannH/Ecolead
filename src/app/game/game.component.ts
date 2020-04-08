@@ -6,6 +6,7 @@ import {LocalService} from '../services/local.service';
 export interface DialogData {
   title: string;
   desc: string;
+  img: string;
   choices : string [];
 }
 
@@ -38,15 +39,15 @@ export class GameComponent implements OnInit {
           pollution: 5
         };
 
-        setTimeout(() => this.openDialog(), 2000);
+        setTimeout(() => this.openDialog(this.events[0]), 2000);
       }
     });
   }
 
-  openDialog(): void {
+  openDialog(gameEvent): void {
     const dialogRef = this.dialog.open(DialogGameEventDialog, {
-      width: '250px',
-      data: {title: 'myTitle', desc: 'myDesc', choices: ['myChoice1', 'myChoice2', 'myChoice3']}
+      width: '500px',
+      data: gameEvent
     });
 
     dialogRef.afterClosed().subscribe(result => {
