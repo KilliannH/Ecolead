@@ -12,12 +12,12 @@ import {LocalService} from '../../../services/local.service';
 
 
 export class RessourcesComponent implements OnInit {
-  money = this.localService.money;
+
 
   constructor(public localService: LocalService ) { }
 
   ngOnInit(): void {
- this.money = this.localService.money;
+
   }
 
 }

@@ -17,6 +17,7 @@ import { MapComponent } from './components/game/map/map.component';
 import { RessourcesComponent } from './components/game/ressources/ressources.component';
 import { EventsComponent } from './components/game/events/events.component';
 import {LocalService, EventsServices} from './services/local.service';
+import {RouterModule} from '@angular/router';
 
 
 
