@@ -7,10 +7,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HudComponent implements OnInit {
 
-  @Input resources: any;
+  @Input() resources: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.resources = {};
   }
 
 }
