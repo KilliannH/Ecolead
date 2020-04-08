@@ -10,6 +10,7 @@ import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
 import { CreditsComponent } from './credits/credits.component';
+import { HudComponent } from './hud/hud.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CreditsComponent } from './credits/credits.component';
     MapComponent,
     NavbarComponent,
     LandingComponent,
-    CreditsComponent
+    CreditsComponent,
+    HudComponent
   ],
   imports: [
     BrowserModule,

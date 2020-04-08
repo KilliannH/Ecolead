@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
+  resources: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.resources = {
+      euros: 2000,
+      happiness: 5,
+      pollution: 5
+    }
   }
 
 }
