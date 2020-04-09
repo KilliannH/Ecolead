@@ -32,19 +32,19 @@ export class EventsService {
     this.events = [
       {
         id: 1,
-        title: 'Emission de Co2',
-        description: this.localService.commander_name + " , le peuple gronde, en effet il n\'est pas satisfait des mesures prises lors de la Cop 24, nous devons prendre des mesures",
-        image: 'https://media.gettyimages.com/photos/manifestation-paris-avant-louverture-du-sommet-cop21-place-de-la-29-picture-id952487960',
-        button1: 'Sans économie viable, nous ne pouvons pas effectuer de transitions écologique.',
-        button2: 'Je ne veux pas avoir le peuple sur le dos, donnez leurs de fausses prommesses',
-        button3: 'Il est vrai que nous pouvons faire mieux que les accords que la Cop 24',
+        title: 'Recyclage',
+        description: this.localService.commander_name + " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec efficitur risus. Vivamus non aliquet justo, eget auctor purus. Cras ullamcorper posuere sapien eu lobortis.",
+        image: 'https://cdn.pixabay.com/photo/2016/11/29/10/02/pile-1868894_960_720.jpg',
+        button1: 'Nam nec luctus eros, at consequat ligula. Proin ullamcorper ante vel risus blandit',
+        button2: 'Aenean convallis vitae magna id scelerisque. Aliquam elementum consequat',
+        button3: 'Orci varius natoque penatibus et magnis',
 
         choice1money: 10,
-        choice1garbage: -60,
+        choice1garbage: -10,
         choice1hapiness: 0,
 
         choice2money: 10,
-        choice2garbage: 0,
+        choice2garbage: -10,
         choice2hapiness: 0,
 
         choice3money: -15,
@@ -71,7 +71,29 @@ export class EventsService {
         choice3money: -5,
         choice3garbage: +10,
         choice3hapiness: +0,
+      },
+      {
+        id: 3,
+        title: 'Nettoyage',
+        description:  this.localService.commander_name + ' Maecenas eget tincidunt ipsum. Sed at felis sit amet ante tempus sagittis eget ut dui. ',
+        image: 'https://cdn.pixabay.com/photo/2018/11/30/20/49/auto-3848591_960_720.jpg',
+        button1:' Praesent congue lectus sit amet ante consequat maximus. ',
+        button2: 'Etiam rhoncus id justo auctor bibendum. Donec lectus tellus, venenatis in metus sit amet ',
+        button3: 'Vestibulum vehicula ante arcu. In pretium turpis diam, in semper orci pellentesque sed.  ',
+
+        choice1money: -15,
+        choice1garbage: -15,
+        choice1hapiness: 15,
+
+        choice2money: 10,
+        choice2garbage: -10,
+        choice2hapiness: 0,
+
+        choice3money: +10,
+        choice3garbage: +10,
+        choice3hapiness: +20,
       }
+
     ]
   }
 }
