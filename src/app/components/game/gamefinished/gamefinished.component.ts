@@ -11,7 +11,7 @@ export class GamefinishedComponent implements OnInit {
   constructor(public localService: LocalService) { }
 
   ngOnInit(): void {
-     let score: number = this.localService.hapiness * 10 + this.localService.garbage * 10 + this.localService.hapiness * 10
+
   }
 
 }

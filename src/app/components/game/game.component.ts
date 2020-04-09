@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
 
     if (this.localService.money < 0 || this.localService.garbage < 0 || this.localService.hapiness < 0) {
-      console.log(this.localService.money)
+      this.localService.score = this.localService.money *10 + this.localService.garbage *10 + this.localService.money *10;
       this.router.navigate(['gamefinished']);
     } else {
 
