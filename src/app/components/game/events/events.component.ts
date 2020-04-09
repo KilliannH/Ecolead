@@ -24,12 +24,13 @@ export class EventsComponent implements OnInit {
 
   currEvent: any;
   constructor(public localService: LocalService,
-              public events: EventsService,
+              public eventService: EventsService,
               public router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     let eventId = parseInt(this.route.snapshot.paramMap.get("id"));
-    this.currEvent = this.events[eventId - 1];
+    this.currEvent = this.eventService.events[eventId - 1];
+    console.log(this.eventService[0]);
   }
 
 
