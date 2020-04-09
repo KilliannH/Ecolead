@@ -1,0 +1,19 @@
+
+
+.landing-button{
+
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-button{
+  height: 15vh;
+  width: 20vh;
+
+}
+.credit-button{
+  height: 15vh;
+  width: 20vh;
+
+}

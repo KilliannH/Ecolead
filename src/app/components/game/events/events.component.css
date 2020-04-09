@@ -1,0 +1,36 @@
+.image{
+max-width: 50%;
+}
+.container{
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  overflow-wrap: break-spaces;
+
+}
+.event-title{
+
+
+}
+.event-content{
+
+}
+.event-button{
+
+
+}
+
+.event-card{
+
+  padding: 10px;
+
+
+
+}
+.margin{
+  margin-top: 10vh;
+
+
+}
