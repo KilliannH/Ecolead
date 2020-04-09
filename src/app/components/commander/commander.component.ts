@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppData } from 'src/app/AppData';
+import{ LocalService} from "../../services/local.service";
 
 @Component({
   selector: 'app-commander',
@@ -8,12 +9,12 @@ import { AppData } from 'src/app/AppData';
 })
 export class CommanderComponent implements OnInit {
   commander = {name: '', country: '' };
-  constructor() { }
+  constructor(private localService: LocalService ) { }
 
   ngOnInit(): void {
-
+    let commanderName = this.localService.commander_name
   }
-  getCommanderName(){
-    console.log(this.commander);
+  setCommanderName(){
+    this.localService.commander_name = this.commander.name
 }
 }

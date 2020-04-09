@@ -13,7 +13,7 @@ import { Injectable } from '@angular/core';
 })
 export class LocalService {
 
-
+  commander_name:string ;
   eventsAnswered: number = 1;
 
  money: number = 50;
