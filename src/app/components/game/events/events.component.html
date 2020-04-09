@@ -3,21 +3,21 @@
 <div class="container">
 <mat-card class="event-card">
 
-    <mat-card-title class="event-title">{{events.title}}</mat-card-title>
+    <mat-card-title class="event-title">{{currEvent.title}}</mat-card-title>
 
 
-    <img mat-card-image class="image" src="{{events.image}}" alt="">
+    <img mat-card-image class="image" src="{{currEvent.image}}" alt="">
 
   <mat-card-content class="event-content">
     <p>
-      {{events.description}}    </p>
+      {{currEvent.description}}    </p>
   </mat-card-content>
   <mat-card-actions class="event-button">
 
-    <button mat-button class="choice-1" (click)="getChoice1()" color="primary"  >{{events.button1}}</button>
+    <button mat-button class="choice-1" (click)="getChoice1()" color="primary"  >{{currEvent.button1}}</button>
 
-    <button mat-button class="choice-2"  (click)="getChoice2()" color="primary" >{{events.button2}}</button>
-    <button mat-button class="choice-3"  (click)="getChoice3()" color="primary" >{{events.button3}}</button>
+    <button mat-button class="choice-2"  (click)="getChoice2()" color="primary" >{{currEvent.button2}}</button>
+    <button mat-button class="choice-3"  (click)="getChoice3()" color="primary" >{{currEvent.button3}}</button>
   </mat-card-actions>
 </mat-card>
 </div>

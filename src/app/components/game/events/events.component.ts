@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {LocalService} from '../../../services/local.service';
-import {EventsServices} from '../../../services/local.service';
+import {EventsService} from '../../../services/events-service.service';
 import {printLine} from 'tslint/lib/verify/lines';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {timeout} from 'rxjs/operators';
 
 
@@ -22,39 +22,38 @@ export class EventsComponent implements OnInit {
 //  garbage = this.localService.garbage;
 //  hapiness = this.localService.hapiness;
 
+  currEvent: any;
   constructor(public localService: LocalService,
-              public events: EventsServices,
-              public router: Router) { }
+              public events: EventsService,
+              public router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-//    this.money = this.localService.money;
-//    this.garbage = this.localService.garbage;
-//    this.hapiness = this.localService.hapiness;
-
+    let eventId = parseInt(this.route.snapshot.paramMap.get("id"));
+    this.currEvent = this.events[eventId - 1];
   }
 
 
   getChoice1(){
 
-      this.localService.money += this.events.choice1money,
-      this.localService.garbage += this.events.choice1garbage,
-      this.localService.hapiness += this.events.choice1hapiness,
+      this.localService.money += this.currEvent.choice1money,
+      this.localService.garbage += this.currEvent.choice1garbage,
+      this.localService.hapiness += this.currEvent.choice1hapiness,
         setTimeout(() =>  {
       this.router.navigate(['game']);
     }, 2000 );
   }
   getChoice2(){
-     this.localService.money += this.events.choice2money,
-      this.localService.garbage += this.events.choice2garbage,
-      this.localService.hapiness += this.events.choice2hapiness ,
+     this.localService.money += this.currEvent.choice2money,
+      this.localService.garbage += this.currEvent.choice2garbage,
+      this.localService.hapiness += this.currEvent.choice2hapiness ,
        setTimeout(() =>  {
          this.router.navigate(['game']);
        }, 2000 );
   }
   getChoice3(){
-     this.localService.money += this.events.choice3money,
-      this.localService.garbage += this.events.choice3garbage,
-      this.localService.hapiness += this.events.choice3hapiness ,
+     this.localService.money += this.currEvent.choice3money,
+      this.localService.garbage += this.currEvent.choice3garbage,
+      this.localService.hapiness += this.currEvent.choice3hapiness ,
        setTimeout(() =>  {
          this.router.navigate(['game']);
        }, 2000 );
