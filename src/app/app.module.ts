@@ -21,6 +21,7 @@ import { EventsService } from './services/events-service.service';
 import {RouterModule} from '@angular/router';
 
 import { GamefinishedComponent } from './components/game/gamefinished/gamefinished.component';
+import { VictoryComponent } from './components/game/victory/victory.component';
 
 
 
@@ -39,6 +40,7 @@ import { GamefinishedComponent } from './components/game/gamefinished/gamefinish
     RessourcesComponent,
     EventsComponent,
     GamefinishedComponent,
+    VictoryComponent,
 
   ],
   imports: [

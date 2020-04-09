@@ -22,7 +22,12 @@ export class GameComponent implements OnInit {
     if (this.localService.money < 0 || this.localService.garbage < 0 || this.localService.hapiness < 0) {
       this.localService.score = this.localService.money *10 + this.localService.garbage *10 + this.localService.money *10;
       this.router.navigate(['gamefinished']);
-    } else {
+    } else if ( this.localService.eventsAnswered > this.eventsService.events.length ){
+      this.localService.score = this.localService.money *10 + this.localService.garbage *10 + this.localService.money *10;
+      this.router.navigate(['victory']);
+    }
+
+      else{
 
       let eventNb = this.localService.eventsAnswered;
 
