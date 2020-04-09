@@ -3,6 +3,6 @@
   <h1>Victoire !</h1>
   <h2>Vous avez su gérer l'urgence climatique !</h2>
   <p>{{localService.commander_name}} votre score est de  {{localService.score}}</p>
-  <button mat-raised-button  routerLink="/commander">rejouer</button>
+  <button mat-raised-button (click)="resetscore()" routerLink="/commander">rejouer</button>
 
 </div>

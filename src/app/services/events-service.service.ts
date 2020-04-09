@@ -39,8 +39,8 @@ export class EventsService {
         button2: 'Aenean convallis vitae magna id scelerisque. Aliquam elementum consequat',
         button3: 'Orci varius natoque penatibus et magnis',
 
-        choice1money: 10,
-        choice1garbage: -10,
+        choice1money: -20,
+        choice1garbage: 10,
         choice1hapiness: 0,
 
         choice2money: 10,
@@ -68,7 +68,7 @@ export class EventsService {
         choice2garbage: -10,
         choice2hapiness: 0,
 
-        choice3money: -5,
+        choice3money: -20,
         choice3garbage: +10,
         choice3hapiness: +0,
       },
@@ -81,11 +81,11 @@ export class EventsService {
         button2: 'Etiam rhoncus id justo auctor bibendum. Donec lectus tellus, venenatis in metus sit amet ',
         button3: 'Vestibulum vehicula ante arcu. In pretium turpis diam, in semper orci pellentesque sed.  ',
 
-        choice1money: -15,
+        choice1money: -20,
         choice1garbage: -15,
         choice1hapiness: 15,
 
-        choice2money: 10,
+        choice2money: -20,
         choice2garbage: -10,
         choice2hapiness: 0,
 

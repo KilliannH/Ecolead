@@ -12,5 +12,11 @@ export class VictoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  resetscore(){
+    this.localService.garbage = 50;
+    this.localService.money = 50;
+    this.localService.hapiness = 50;
+    this.localService.eventsAnswered = 1;
+  }
 
 }
