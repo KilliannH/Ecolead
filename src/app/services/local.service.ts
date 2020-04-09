@@ -13,12 +13,13 @@ import { Injectable } from '@angular/core';
 })
 export class LocalService {
 
-
+  commander_name:string ;
   eventsAnswered: number = 1;
 
  money: number = 50;
  garbage: number = 50;
  hapiness: number = 50;
+ score : number  ;
 
 
   constructor() { }
