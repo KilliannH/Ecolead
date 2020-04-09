@@ -40,7 +40,7 @@ export class EventsService {
         button3: 'Il est vrai que nous pouvons faire mieux que les accords que la Cop 24',
 
         choice1money: 10,
-        choice1garbage: -10,
+        choice1garbage: -60,
         choice1hapiness: 0,
 
         choice2money: 10,

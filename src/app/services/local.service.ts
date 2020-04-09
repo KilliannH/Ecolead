@@ -19,6 +19,7 @@ export class LocalService {
  money: number = 50;
  garbage: number = 50;
  hapiness: number = 50;
+ score : number = this.money *10 + this.garbage *10 + this.money *10;
 
 
   constructor() { }

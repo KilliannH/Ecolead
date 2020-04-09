@@ -20,6 +20,8 @@ import { LocalService } from './services/local.service';
 import { EventsService } from './services/events-service.service';
 import {RouterModule} from '@angular/router';
 
+import { GamefinishedComponent } from './components/game/gamefinished/gamefinished.component';
+
 
 
 
@@ -36,6 +38,7 @@ import {RouterModule} from '@angular/router';
     MapComponent,
     RessourcesComponent,
     EventsComponent,
+    GamefinishedComponent,
 
   ],
   imports: [
